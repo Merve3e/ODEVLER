@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./BTN-MSengun.css">
+        <link type="images/png" rel="icon" href="resimler/Music.png">
+        <title>S a n a T</title>
+    </head>
+<body>
+    
+    <p class="baslik">"Sanatsız kalan bir milletin hayat damarlarından biri kopmuş olur. Bir milletin sanat yeteneği güzel sanatlara verdiği değerle ölçülür".</p>
+    <p class="baslik"><b>Mustafa   Kemal ATATÜRK</b></p>
+
+    <h1>SanaT Meydanı</h1>
+
+    <h2>Etkinlik Rezervasyonu</h2>
+
+	<div class="tablo">
+    <form action="Web2MerveS.html" method="get">
+        <div>
+            <p class="inline">Etkinlik Türü:</p>
+            
+            <div class="inline">
+                <img src="resimler/Tiyatro.png" alt="tiyatro" width="150">
+                
+                <img src="resimler/Opera.png" alt="opera" width="150"> <br>
+                
+                <input class="tiyatro" type="radio" name="tiyatro" value="tiyatro">
+                <input id="opera" type="radio" name="opera" value="hayır">
+            </div>
+                
+            
+        </div>
+
+
+        <div>
+            <p>Etkinlik Tarihi: <input type="date" name="etkinlikTarihi" ></p>
+            
+            <p class="inline">TC Kimlik No:<input type="text" name="tc" placeholder="12345678901"></p>
+            <p class="inline">Ad/Soyad:<input type="text" name="ad-soyad" placeholder="adınız soyadınız"></p>
+            
+        </div>
+       
+        
+        
+        <div>
+            <div class="inline">
+            <p>İzleme Konum Tercihiniz:</p>
+            <p> 
+                <select name="seciliYer">
+                    <option value="A-Sahne Önü">A- Sahne Önü  </option>
+                    <option value="B- Salon Arka Bölüm" selected>B- Salon Arka Bölüm</option>
+                    <option value="C- Balkon Sağ Bölüm">C-Balkon Sağ Bölüm</option>
+                    <option value="D- Balkon Sol Bölüm">D-Balkon Sol Bölüm</option>
+                    <option value="K1_SahneOnu ">K1_SahneOnu </option>
+                    <option value="K2_SalonArka	">K2_SalonArka	</option>
+                    <option value="K3_BalonSag">K3_BalonSag</option>
+                    <option value="K4_BalonSol">K4_BalonSol</option>
+                    
+                </select>
+            </p>
+        </div>
+        <div class="inline">
+            <p>Talep Edilen Bilet Sayısı</p>
+          <input type="text" id="biletSayisi" name="biletSayisi" onblur="validateBiletSayisi()">
+          <span id="biletUyari" style="color: red;"></span>
+        </div>
+            
+        </div>
+        
+        
+       
+        
+        
+        
+        <div>
+            <p class="inline">
+                <input type="submit" value="Rezervasyon Yap" >
+            </p>
+            <p class="inline">
+                <input type="reset" value="Formu Temizle" >
+            </p>
+        </div>
+        
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+          function validateBiletSayisi() {
+            var biletSayisi = document.getElementById("biletSayisi").value;
+            if (isNaN(biletSayisi) || biletSayisi === "") {
+                alert("Lütfen sayısal bir değer giriniz.");
+                
+            }
+        }
+    
+    </script>
+</body>
+</html>
